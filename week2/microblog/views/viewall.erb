@@ -1,0 +1,14 @@
+<html><title>The ultimate microblog</title>
+<head>Menu: </head>
+<a href="/new">[ New Post ]</a>
+<h2>List of all posts</h2>
+<%
+i = 0
+posts.each do |post| %><br>No: 
+<a href="/<%= "#{i}" %>">[ <%= "#{i}" %> ]</a> 
+	<%= "#{post}" %>
+<%
+i += 1
+end
+%>
+</html>

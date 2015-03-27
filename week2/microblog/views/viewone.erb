@@ -1,0 +1,16 @@
+<html><title>The ultimate microblog</title>
+<head>Menu: </head>
+<a href="/">[ Home ]</a>
+<a href="/new">[ New Post ]</a>
+
+<h2>This is a single post No: <%= "#{id.to_i}" %></h2>
+<%
+post = posts[id.to_i] 
+%>
+<h1><b><p>
+<%= "#{post}" %>
+</p></b></h1>
+<form method="delete">
+<input type="submit" value="Delete this post">
+</form>
+</html>
