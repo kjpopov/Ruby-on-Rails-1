@@ -25,7 +25,11 @@ get '/:id' do
 end
 
 delete '/:id' do
-  'you can not delete your facebook'
+  db_connect.execute(
+    'DELETE FROM myposts WHERE id=?',
+    [params[:id]])
+  "You Deleted a post: #{params[:id]}
+  <meta http-equiv='refresh' content='1; url=/' />"
 end
 
 post '/new' do

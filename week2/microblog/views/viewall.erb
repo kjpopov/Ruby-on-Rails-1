@@ -4,7 +4,7 @@
 <h2>List of all posts</h2>
 <table width="90%">
 <% posts.execute( "SELECT * FROM myposts" ) do |row| %><tr>
-  <td width="40"><a href="/<%= row[0] %>">[ <%= row[0] %> ]</a></td>
+  <td width="50"><a href="/<%= row[0] %>">[ <%= row[0] %> ]</a></td>
   <td><%= row[1] %></td>
   <td><%= row[2] %></td></tr>
 <% end %>
