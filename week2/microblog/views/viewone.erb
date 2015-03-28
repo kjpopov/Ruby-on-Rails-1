@@ -4,13 +4,14 @@
 <a href="/new">[ New Post ]</a>
 
 <h2>This is a single post No: <%= "#{id.to_i}" %></h2>
-<%
-post = posts[id.to_i] 
-%>
-<h1><b><p>
-<%= "#{post}" %>
+<% posts.execute( "SELECT * FROM myposts WHERE id=#{id.to_i}" ) do |row| %>
+  <%= row[0] %>
+  <%= row[1] %>
+  <%= row[2] %>
+<% end %>
 </p></b></h1>
-<form method="delete">
+<form method="post">
 <input type="submit" value="Delete this post">
+<input type="hidden" name="_method" value="delete">
 </form>
 </html>
