@@ -2,10 +2,12 @@
 require 'sinatra'
 require 'sqlite3'
 
-$db = SQLite3::Database.new 'myblog.db'
+def db_connect
+  SQLite3::Database.new 'myblog.db'
+end
 
 get '/' do
-  erb :viewall, :locals => { :posts => $db }
+  erb :viewall, locals: { posts: db_connect }
 end
 
 get '/new' do
@@ -19,7 +21,7 @@ get '/new' do
 end
 
 get '/:id' do
-  erb :viewone, :locals => { :posts => $db, :id => params[:id] }
+  erb :viewone, locals: { posts: db_connect, id: params[:id] }
 end
 
 delete '/:id' do
@@ -27,7 +29,7 @@ delete '/:id' do
 end
 
 post '/new' do
-  $db.execute(
+  db_connect.execute(
     'INSERT INTO myposts(name, post) VALUES (?, ?)',
     [params[:blogger], params[:message]])
   "You posted '#{params[:message]}'
