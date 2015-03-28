@@ -4,10 +4,9 @@
 <a href="/new">[ New Post ]</a>
 
 <h2>This is a single post No: <%= "#{id.to_i}" %></h2>
-<% posts.execute( "SELECT * FROM myposts WHERE id=#{id.to_i}" ) do |row| %>
-  <%= row[0] %>
-  <%= row[1] %>
-  <%= row[2] %>
+<% posts.execute( "SELECT * FROM myposts WHERE id=?", [id.to_i] ) do |row| %>
+  Blogger: <b><%= row[1] %></b><br>
+  <p><i><%= row[2] %></i></p>
 <% end %>
 </p></b></h1>
 <form method="post">
