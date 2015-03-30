@@ -39,3 +39,7 @@ post '/new' do
   "You posted '#{params[:message]}'
   <meta http-equiv='refresh' content='1; url=/' />"
 end
+
+post '/Search/:stag' do
+  erb :search, locals: { posts: db_connect, stag: params[:stag] }
+end

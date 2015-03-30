@@ -1,7 +1,18 @@
 
+<script type="text/javascript">
+function OnSubmitForm()
+{
+  document.myform.action = window.location.protocol + '//' + 
+    window.location.host + "/Search/" + document.myform.searchtag.value;
+  return true;
+}
+</script>
 <html>
+  <form name="myform" onsubmit="return OnSubmitForm();" method="post">
   <a href="/">[ Home ]</a>
   <a href="/new">[ New Post ]</a>
+  <input type="text" name="searchtag" maxlength="8" size="8">
+  <input type="submit" value="Search"></form>
   <title>The ultimate microblog</title>
   <body><br>
 <blockquote>

@@ -1,10 +1,8 @@
-<h2>This is a single post No: <%= "#{id.to_i}" %></h2>
-<% posts.execute( "SELECT * FROM myposts WHERE id=?", [id.to_i] ) do |row| %>
-  Blogger: <b><%= row[1] %></b><br>
-  <p><i><%= row[2] %></i></p>
+<h2>Yo've searched the blog posts for: <%= "#{stag}" %></h2>
+<table width="90%">
+<% posts.execute( "SELECT * FROM myposts WHERE post LIKE ?", '%' + stag + '%' ) do |row| %><tr>
+  <td width="50"><a href="/<%= row[0] %>">[ <%= row[0] %> ]</a></td>
+  <td><%= row[1] %></td>
+  <td><%= row[2] %></td></tr>
 <% end %>
-</p></b></h1>
-<form method="post">
-<input type="submit" value="Delete this post">
-<input type="hidden" name="_method" value="delete">
-</form>
+</table>
