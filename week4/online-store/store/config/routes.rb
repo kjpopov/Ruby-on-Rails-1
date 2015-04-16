@@ -3,7 +3,16 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'product#count'
+
+  concern :indexable do
+    get 'count'
+    get 'range/:from/:count', to: :range
+  end
+
+  resources :products,   concerns: :indexable
+  resources :brands,     concerns: :indexable
+  resources :categories, concerns: :indexable 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
