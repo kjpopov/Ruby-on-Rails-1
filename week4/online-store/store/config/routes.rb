@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'product#count'
+  root 'product#index'
+
+  get '/products/count', to: 'products#count'
 
   concern :indexable do
     get 'count'
