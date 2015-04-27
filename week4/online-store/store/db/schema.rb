@@ -13,12 +13,25 @@
 
 ActiveRecord::Schema.define(version: 20150423175652) do
 
+  create_table "brands", force: :cascade do |t|
+    t.string "name"
+    t.text   "description"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.text   "description"
+  end
+
   create_table "products", force: :cascade do |t|
+    t.integer "brand_id"
     t.string  "name"
     t.text    "description"
     t.string  "title"
     t.text    "body"
     t.boolean "published"
   end
+
+  add_index "products", ["brand_id"], name: "index_products_on_brand_id"
 
 end
