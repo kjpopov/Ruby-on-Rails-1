@@ -2,6 +2,9 @@ class Tweet
 
 require 'net/http'
 
-Net::HTTP.get('tweeter.com', '/bob') # => String
+def self.authenticate
+	uri = URI('https://api.twitter.com/oauth/authenticate')
+  Net::HTTP.get(uri) # => String
+end
 
 end
