@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
 
 def index
-	render json: Tweet.get_tw
+	# render json: Tweet.get_tweets
 end
 
 end
