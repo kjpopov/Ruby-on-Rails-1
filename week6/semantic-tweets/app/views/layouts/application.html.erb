@@ -1,14 +1,36 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
-  <title>SemanticTweets</title>
+  <title>Semantic Tweets</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+
+<div id="page">
+	<div id="header">
+			<h1><a href="#">SEMANTIC TWEETS</a></h1>
+			<div class="description">Hackbulgaria Semantic Tweets</div>
+	</div>
+	
+	<div id="menulinks">
+		<a class="active" href="#">Home</a>
+		<a href="#">Update Tweets</a>
+		<a href="#">Hide Negative</a>
+		<a href="#">Contact Us</a>
+	</div>
+	
+<div id="mainarea">
+	<div id="contentarea">
+		<h2>WELCOME</h2>
 
 <%= yield %>
 
+</div></div>
+	
 </body>
 </html>

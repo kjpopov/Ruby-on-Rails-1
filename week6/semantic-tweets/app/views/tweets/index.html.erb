@@ -1,3 +1,4 @@
-<% Tweet.get_tweets.each do |key| %> 
-  <%= key["text"] %><br><br>
+<% Tweet.get_tweets.each do |key| %>
+<div class="preamble" id="zen-preamble" role="article">
+  <p><%= key["text"] %></p></div>
 <% end %>
