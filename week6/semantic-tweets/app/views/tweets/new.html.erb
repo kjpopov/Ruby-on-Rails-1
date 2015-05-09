@@ -1,0 +1,7 @@
+<% @api_data.each do |key| %>
+  <div>
+    <p><%= key["created_at"] %><br>
+    <%= key["text"] %><br>
+    Author: <%= key["user"]["name"] %></p>
+  </div>
+<% end %>

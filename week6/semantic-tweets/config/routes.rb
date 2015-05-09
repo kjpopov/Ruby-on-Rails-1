@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   
+  get 'tweets/analize' => 'tweets#analize'
+
   resources :tweets
 
   root 'tweets#index'

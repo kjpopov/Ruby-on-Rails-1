@@ -14,19 +14,20 @@
 <div id="page">
 	<div id="header">
 			<h1><a href="#">SEMANTIC TWEETS</a></h1>
-			<div class="description">Hackbulgaria Semantic Tweets</div>
+			<div class="description">Hackbulgaria Semantic Tweets Week6 Task</div>
 	</div>
 	
 	<div id="menulinks">
-		<a class="active" href="#">Home</a>
-		<a href="tweets/new">Update Tweets</a>
-		<a href="#">Hide Negative</a>
+		<%= link_to 'Home', '/', :class => is_active?("index") %>
+		<%= link_to "Update Tweets", { controller: "tweets", action: "new" }, :class => is_active?("new") %>
+		<%= link_to "Analize Tweets", { controller: "tweets", action: "analize" }, 
+		    :class => is_active?("analize") %>
 		<a href="#">Contact Us</a>
 	</div>
 	
 <div id="mainarea">
 	<div id="contentarea">
-		<h2>WELCOME</h2>
+		<h2>See what we mean below ;-) </h2><br>
 
 <%= yield %>
 

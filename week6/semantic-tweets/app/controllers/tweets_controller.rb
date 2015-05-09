@@ -5,7 +5,11 @@ def index
 end
 
 def new
-	render json: Tweetsfromapi.storein_json
+	@api_data = JSON.parse(Tweetsfromapi.storein_json)
+end
+
+def analize
+
 end
 
 end
