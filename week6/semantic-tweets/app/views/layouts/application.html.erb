@@ -19,7 +19,7 @@
 	
 	<div id="menulinks">
 		<a class="active" href="#">Home</a>
-		<a href="#">Update Tweets</a>
+		<a href="tweets/new">Update Tweets</a>
 		<a href="#">Hide Negative</a>
 		<a href="#">Contact Us</a>
 	</div>
@@ -31,6 +31,9 @@
 <%= yield %>
 
 </div></div>
+<div id="footer">
+		There is <%= Tweet.get_tweets.count() %> tweets stored locally, press update tweets to sync with twitter API.
+	</div>
 	
 </body>
 </html>

@@ -9,7 +9,7 @@ color:#FFFFFF;
 
 #page {
 width:900px;
-background-image:url(images/page.png);
+background-image:url(page.png);
 margin:auto;
 padding:auto;
 }
@@ -18,7 +18,7 @@ padding:auto;
 clear:both;
 width:850px;
 height:120px;
-background-image:url(images/header.png);
+background-image:url(header.png);
 padding-top:73px;
 padding-left:50px;
 }
@@ -28,7 +28,7 @@ clear:both;
 width:877px;
 height:53px;
 padding-left:23px;
-background-image:url(images/menulinks.png);
+background-image:url(menulinks.png);
 }
 
 #menulinks a {
@@ -47,7 +47,7 @@ background-image:url(images/menulinks.png);
   }
   
 #menulinks a:hover, #menulinks a.active {
-	background-image:url(images/menuhover.png);
+	background-image:url(menuhover.png);
 	background-position:top left;
 	text-decoration:none;
 	color:#FFFFFF;
@@ -80,7 +80,7 @@ height:32px;
 padding-top:20px;
 text-align:center;
 line-height:14pt;
-background-image:url(images/footer.png);
+background-image:url(footer.png);
 background-repeat:no-repeat;
 color:#FFFFFF;
 }
