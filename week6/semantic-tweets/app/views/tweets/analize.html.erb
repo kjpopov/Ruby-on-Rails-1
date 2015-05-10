@@ -1,1 +1,5 @@
-analize.html.erb
+<% @results.each do |data| %> 
+  <%= data['source_text'] %><br>
+  Sentiment polarity: <b><%= data['sentiment_polarity'] %></b><br><hr>
+<% end %>
+<br>

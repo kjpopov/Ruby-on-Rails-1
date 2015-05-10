@@ -1,3 +1,5 @@
+require 'semantria'
+
 class SessionCallbackHandler < Semantria::CallbackHandler
   def onRequest(sender, args)
     #print "Request: ", args, "\n"
@@ -18,15 +20,4 @@ class SessionCallbackHandler < Semantria::CallbackHandler
   def onCollsAutoResponse(sender, args)
     #print "CollsAutoResponse: ", args.length, args, "\n"
   end
-end
-
-class Semantria_api 
-  def open_session
-  	session = Semantria::Session.new($consumer_key, $consumer_secret, 'TestApp', true)
-  	# Initialize session callback handlers
-    callback = SessionCallbackHandler.new()
-    session.setCallbackHandler(callback)
-  end
-
-
 end

@@ -27,11 +27,17 @@
 	
 <div id="mainarea">
 	<div id="contentarea">
-		<h2>See what we mean below ;-) </h2><br>
+		<h2>See what we mean below ;-) </h2>
 
 <%= yield %>
 
 </div></div>
+
+<div id="sidebar">
+		<h2>Our Positives</h2>
+		<%= yield :positive %>
+</div>
+
 <div id="footer">
 		There is <%= Tweet.get_tweets.count() %> tweets stored locally, press update tweets to sync with twitter API.
 	</div>

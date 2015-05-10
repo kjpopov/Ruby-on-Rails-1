@@ -1,5 +1,13 @@
-<% Tweet.get_tweets.each do |key| %>
+<% @semantria_results.each do |data| %>
   <div>
-    <p><%= key["text"] %></p>
+    <% if data['source_text'] %>
+      <%= data['source_text'] %><br>
+      Sentiment polarity: <b><%= data['sentiment_polarity'] %></b><br><hr>
+      <% content_for :positive do %>
+        <% if is_positive?(data) %>
+        <%= is_positive?(data) %><br><br>
+        <% end %>  
+      <% end %>
+    <% end %>
   </div>
 <% end %>
