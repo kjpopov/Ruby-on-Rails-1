@@ -1,5 +1,3 @@
-require 'semantria'
-
 class SessionCallbackHandler < Semantria::CallbackHandler
   def onRequest(sender, args)
     #print "Request: ", args, "\n"

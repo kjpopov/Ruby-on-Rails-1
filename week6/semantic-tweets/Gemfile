@@ -16,7 +16,7 @@ gem 'therubyracer', platforms: :ruby
 # Oauth
 gem 'oauth'
 # Semantria_SDK
-gem 'semantria_sdk', '~> 3.8.79'
+gem 'semantria_sdk', '~> 3.8.79', require: "semantria"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

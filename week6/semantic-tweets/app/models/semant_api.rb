@@ -1,5 +1,3 @@
-require 'semantria'
-
 class SemantApi
   def self.new_session
   	session = Semantria::Session.new($consumer_key, $consumer_secret, 'TestApp', true)
